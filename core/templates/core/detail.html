@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<article class="blog-post">
+    <div class="col-auto d-none d-lg-block">
+        <img class="bd-placeholder-img" width="100%" height="250" src={% static 'core/img/sismo.jpg' %} alt="">
+    </div>
+    <strong class="d-inline-block mb-2 mt-3 text-primary-emphasis">Categoria</strong>
+    <h2 class="display-5 link-body-emphasis mb-1">Titulo del post</h2>
+    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+
+    <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+    <hr>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel nunc a velit aliquet tempus. Duis finibus ut tellus ut tempor. Suspendisse volutpat, risus et fringilla ullamcorper, quam elit ultrices massa, sed pellentesque arcu mauris vitae eros. Mauris consectetur porttitor hendrerit. Aenean tristique vitae nunc eu consequat. Sed elit eros, auctor quis augue non, lacinia rhoncus ligula. Aliquam erat volutpat. Donec vehicula vestibulum varius. Vivamus pretium pretium libero id euismod. Cras ut lacinia nunc. Sed nec dapibus tortor, tincidunt molestie lectus. Sed posuere id neque at blandit. Etiam vitae mauris ac velit facilisis maximus id a risus.</p>
+
+    <p> Vivamus viverra est vitae orci ultrices, eget mattis elit semper. Phasellus placerat in lacus et faucibus. Nulla nec felis leo. Ut tempor congue dictum. Quisque consectetur at lorem at pharetra. Quisque dui risus, gravida tincidunt urna non, venenatis auctor ipsum. Integer luctus mi ultrices luctus convallis. Aliquam vitae maximus elit, ut mattis metus. Maecenas at ullamcorper risus, in porttitor ex. Sed egestas massa vitae eleifend aliquet. Phasellus et ultricies odio, ac finibus magna.</p>
+        
+    <p> Fusce id accumsan risus. Phasellus eget libero in ipsum sodales finibus quis eu mauris. Morbi sit amet sollicitudin justo, at ultrices neque. Curabitur vitae nisi ac risus mattis malesuada eget sed ligula. Etiam ullamcorper, urna sed euismod sollicitudin, tortor nulla faucibus ipsum, vitae semper augue arcu venenatis sem. In ornare consequat erat, a convallis ex eleifend mattis. Nunc posuere dolor nulla, sed volutpat leo finibus at. Nulla leo lacus, faucibus in ante sed, porttitor tincidunt arcu. Aliquam egestas felis nec semper accumsan. Pellentesque porta, dolor sit amet eleifend vehicula, ex urna lacinia arcu, et gravida risus nisi et velit. </p>
+</article>
+<div class="my-3">
+    <a class="btn btn-success rounded-pill" href={% url "home" %}>Volver al inicio</a>
+</div>
+{% endblock content %}
