@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Tag, Post
+from .models import Category, Tag, Post, About, Link
 admin.site.site_header = 'Administración del Blog'
 admin.site.index_title = 'Panel de Control'
 admin.site.site_title = 'Blog'
@@ -34,3 +34,17 @@ class PostAdmin(admin.ModelAdmin):
 	post_tags.short_description = 'Etiquetas'
 
 admin.site.register(Post, PostAdmin)
+
+# ABOUT
+class AboutAdmin(admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+    list_display = ('description', 'created')
+
+admin.site.register(About, AboutAdmin)
+
+# REDES SOCIALES
+class LinkAdmin(admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+    list_display = ('name', 'key', 'url', 'icon')
+    
+admin.site.register(Link, LinkAdmin)

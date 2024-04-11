@@ -14,5 +14,5 @@ urlpatterns = [
 # PAGINA FILTRADA POR FECHA
     path('dates/',dates, name="dates"),
 
-    path('post/', post, name="post"),
+    path('post/<int:post_id>', post, name="post"),
 ]

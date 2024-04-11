@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<h1> Pagina no encontrada </h1>
+    
+    <!-- NAVEGACION ENTRE ARTICULOS MAS ANTIGUOS - PAGINACION -->
+    <hr>
+    
+    {% if request.path != '/' %}
+        <div class="my-3">
+            <a class="btn btn-success rounded-pill" href={% url 'home' %}>Volver al inicio</a>
+        </div>
+    {% endif %}
+{% endblock content %}
