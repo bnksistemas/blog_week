@@ -6,10 +6,10 @@ urlpatterns = [
     path('',home, name="home"),
     
     # PAGINA FILTRADA POR CATEGORIAS
-    path('category/',category, name="category"),
+    path('category/<int:category_id>',category, name="category"),
     
     # PAGINA FILTRADA POR AHUTOR
-    path('author/',author, name="author"),
+    path('author/<int:author_id>',author, name="author"),
 
 # PAGINA FILTRADA POR FECHA
     path('dates/',dates, name="dates"),
