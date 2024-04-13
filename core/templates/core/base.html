@@ -50,20 +50,24 @@
                     </div>
                     <div class="p-4">
                         <h4 class="fst-italic">Archivos</h4>
-                        <ol class="list-unstyled mb-0">
-                            <li><a href="#">March 2021</a></li>
-                            <li><a href="#">February 2021</a></li>
-                            <li><a href="#">January 2021</a></li>
-                            <li><a href="#">December 2020</a></li>
-                            <li><a href="#">November 2020</a></li>
-                            <li><a href="#">October 2020</a></li>
-                            <li><a href="#">September 2020</a></li>
-                            <li><a href="#">August 2020</a></li>
-                            <li><a href="#">July 2020</a></li>
-                            <li><a href="#">June 2020</a></li>
-                            <li><a href="#">May 2020</a></li>
-                            <li><a href="#">April 2020</a></li>
-                        </ol>
+                        {% for item in dates %}
+                            <ol class="list-unstyled mb-0">
+                                <li>
+                                    {% if item.month == 1 %} <a href={% url 'dates' item.month item.year %}>Enero de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 2 %} <a href={% url 'dates' item.month item.year%}>Febrero de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 3 %} <a href={% url 'dates' item.month item.year%}>Marzo de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 4 %} <a href={% url 'dates' item.month item.year%}>Abril de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 5 %} <a href={% url 'dates' item.month item.year%}>Mayo de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 6 %} <a href={% url 'dates' item.month item.year%}>Junio de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 7 %} <a href={% url 'dates' item.month item.year%}>Julio de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 8 %} <a href={% url 'dates' item.month item.year%}>Agosto de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 9 %} <a href={% url 'dates' item.month item.year%}>Septiembre de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 10 %} <a href={% url 'dates' item.month item.year%}>Octubre de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 11 %} <a href={% url 'dates' item.month item.year%}>Noviembre de {{item.year}} </a> {% endif %}
+                                    {% if item.month == 12 %} <a href={% url 'dates' item.month item.year%}>Diciembre de {{item.year}} </a> {% endif %}
+                                </li>
+                            </ol>
+                        {% endfor %}
                     </div>
                     <div class="p-4">
                         <h4 class="fst-italic">Nuestras Redes</h4>

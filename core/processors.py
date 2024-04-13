@@ -17,7 +17,12 @@ def ctx_dic_category(request):
     
     return ctx_category
 
+
 # ARCHIVOS
+def ctx_dic_history(request):
+	ctx_history = {}
+	ctx_history['dates'] = Post.objects.dates('created', 'month', order='DESC').distinct()
+	return ctx_history
 
 # REDES SOCIALES
 

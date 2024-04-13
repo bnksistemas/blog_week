@@ -62,5 +62,27 @@ def author(request, author_id):
         return render(request, 'core/404.html')
 
 
-def dates(request):
-    return render(request, 'core/home.html')
+def dates(request, month_id, year_id):
+    posts= Post.objects.filter(published = True, created__month=month_id, created__year=year_id)
+    meses={
+        1: 'Enero',
+        2: 'Febrero',
+        3: 'Marzo', 
+        4: 'Abril',
+        5: 'Mayo',
+        6: 'Junio',
+        7: 'Julio',
+        8: 'Agosto',
+        9: 'Septiembre',
+        10: 'Octubre',
+        11: 'Noviembre',
+        12: 'Diciembre',
+    }
+    if month_id > 12 or month_id < 1:
+        return render(request, 'core/404.html')
+    data = {
+        'posts': posts,
+        'month': meses[month_id],
+        'year' : year_id,
+    }
+    return render(request, 'core/date.html', data)

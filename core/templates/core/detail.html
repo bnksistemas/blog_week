@@ -15,7 +15,7 @@
     <p>{{ post.content|safe }} </p>
     <strong>Etiquetas</strong>
     {% for tag in post.tags.all %}
-        <span class="badge text-bg-info">{{ tag.name }} </span>
+        <span class="badge text-bg-info">{{ tag.name|upper }} </span>
     {% endfor %}
 </article>
 <div class="my-3">

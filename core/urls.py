@@ -12,7 +12,7 @@ urlpatterns = [
     path('author/<int:author_id>',author, name="author"),
 
 # PAGINA FILTRADA POR FECHA
-    path('dates/',dates, name="dates"),
+    path('dates/<int:month_id>/<int:year_id>' , dates, name="dates"),
 
     path('post/<int:post_id>', post, name="post"),
 ]
